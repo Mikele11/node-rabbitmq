@@ -1,0 +1,4 @@
+- npm install
+- node node rabbit_mq_setup
+- 1 terminal => node processor-service.js
+- 2 teminal => node web-service.js

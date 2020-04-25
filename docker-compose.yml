@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+
+  node-setup:
+    build: .
+    command: node rabbit_mq_setup.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+  node-process:
+    build: .
+    command: node processor-service.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env 
+  node-web:
+    build: .
+    command: web-service.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports: 
+      - "3000:3000"  
+    env_file:
+      - .env
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app 
+  rabbitmq:
+    image: rabbitmq:3.7.4
+    networks:
+      - app-network
+    
+networks:
+  app-network:
+    driver: bridge    

@@ -1,0 +1,23 @@
+{
+  "name": "rabbitmq-nodejs",
+  "version": "0.0.1",
+  "description": "rabbitmq-nodejs to send/receive messages",
+  "main": "app.js",
+  "scripts": {
+    "start": "node rabbit_mq_setup.js"
+  },
+  "author": {
+    "name": "Mikele"
+  },
+  "dependencies": {
+    "amqp": "0.2.0",
+    "amqplib": "^0.5.5",
+    "body-parser": "^1.19.0",
+    "bramqp": "^0.6.1",
+    "dotenv": "*",
+    "express": "3.4.4",
+    "jackrabbit": "*",
+    "node-rabbitmq-wrapper": "^1.4.1",
+    "nodemon": "^2.0.3"
+  }
+}
