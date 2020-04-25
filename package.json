@@ -15,7 +15,7 @@
     "body-parser": "^1.19.0",
     "bramqp": "^0.6.1",
     "dotenv": "*",
-    "express": "3.4.4",
+    "express": "4.17.1",
     "jackrabbit": "*",
     "node-rabbitmq-wrapper": "^1.4.1",
     "nodemon": "^2.0.3"
